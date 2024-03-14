@@ -15,3 +15,9 @@ vim.keymap.set("i", "<C-h>", "<Left>")
 vim.keymap.set("i", "<C-l>", "<Right>")
 vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
+
+-- Ctrl-/ works for this in tmux
+local Util = require("lazyvim.util")
+vim.keymap.set("n", "<C-_>", function()
+  Util.terminal(nil, { border = "rounded" })
+end, { desc = "Term with border" })

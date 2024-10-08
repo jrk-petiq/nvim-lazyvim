@@ -21,3 +21,15 @@ local Util = require("lazyvim.util")
 vim.keymap.set("n", "<C-_>", function()
   Util.terminal(nil, { border = "rounded" })
 end, { desc = "Term with border" })
+
+vim.keymap.set("n", "<leader>p", '<cmd>lua require("cmp").setup { enabled = true }<cr>', { desc = "Enable completion" })
+vim.keymap.set(
+  "n",
+  "<leader>P",
+  '<cmd>lua require("cmp").setup { enabled = false }<cr>',
+  { desc = "Disable completion" }
+)
+
+-- open terminal in right pane and bottom right pane
+vim.keymap.set("n", "<leader>;", "<C-w>v:term<CR>")
+vim.keymap.set("n", "<leader>'", "<C-w>s:term<CR>")

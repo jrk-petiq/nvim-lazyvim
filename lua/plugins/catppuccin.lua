@@ -6,4 +6,16 @@ return {
   config = function()
     vim.cmd.colorscheme("catppuccin-mocha")
   end,
+  {
+    "catppuccin",
+    opts = {
+      transparent_background = false,
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
 }
